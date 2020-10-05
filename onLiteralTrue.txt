@@ -1,0 +1,38 @@
+onLiteralTrue
+	
+	//gestione joinTuples
+	if(tuple.getPredicateName() == &_c){
+
+		//ho un nuovo valore vero per c
+        int Y = tuple.at(0);
+        int Z = tuple.at(1);
+
+        //cerco tutte le tuple di d che metchano con la nuova tupla
+        // nota se d e c non avessero variabili in comune il getValues non riceve alcun parametro
+        
+        const std::vector<const Tuple*>* tuples1 = &pd_0_.getValues({Z});
+        
+
+        for(int i1=0;i1<tuples1->size();i1++){
+            int X = tuples1->at(i1)->at(1);
+
+            //ho un valore per tutte le varibili delle joinTuple
+            std::string predicateName ="c_Y_Z_d_Z_X_";
+            //salvo la join tuple nelle vere
+            wc_Y_Z_d_Z_X_.insert(Tuple(&predicateName,std::vector<int>({Y,Z,Z,X})));
+            //la cancello dalle indefinite 
+            uc_Y_Z_d_Z_X_.erase(Tuple(&predicateName,std::vector<int>({Y,Z,Z,X})));
+        }
+    }
+    
+    // seguo lo stesso procedimento per d cambiando il joinOrder
+
+    if(tuple.getPredicateName== &_b)
+        X=tuple->at(0)
+        Y=tuple->at(1)
+        tuples1 = a.find(X)
+        if(var>0){
+            //cerco le joinTuple vere e indefinite aventi X e Y e le aggiungo alla mappa 
+        }else{
+            elimino dalla mappa delle sharedVariables la riga X,Y
+        }

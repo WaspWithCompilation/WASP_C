@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="src">
+        <df name="heuristic">
+          <in>ExternalHeuristic.cpp</in>
+          <in>MinisatHeuristic.cpp</in>
+        </df>
+        <df name="input">
+          <in>Dimacs.cpp</in>
+          <in>GringoNumericFormat.cpp</in>
+          <in>Rule.cpp</in>
+          <in>WeightConstraint.cpp</in>
+        </df>
+        <df name="interpreters">
+          <in>Interpreter.cpp</in>
+          <in>MyCppEagerInterpreter.cpp</in>
+          <in>MyCppLazyInterpreter.cpp</in>
+          <in>MyPerlInterpreter.cpp</in>
+          <in>MyPythonInterpreter.cpp</in>
+        </df>
+        <df name="lp2cpp">
+          <df name="datastructures">
+            <in>AuxiliaryMap.cpp</in>
+            <in>BoundAnnotatedLiteral.cpp</in>
+            <in>DenseMap.cpp</in>
+            <in>PredicateSet.cpp</in>
+            <in>TupleWithReasons.cpp</in>
+            <in>TupleWithoutReasons.cpp</in>
+          </df>
+          <df name="DLV2libs">
+            <df name="input">
+              <in>Buffer.cpp</in>
+              <in>InputDirector.cpp</in>
+            </df>
+            <df name="util">
+              <in>Options.cpp</in>
+              <in>Utils.cpp</in>
+            </df>
+          </df>
+          <df name="language">
+            <in>Aggregate.cpp</in>
+            <in>Aggregate.h</in>
+            <in>ArithmeticExpression.cpp</in>
+            <in>ArithmeticRelation.cpp</in>
+            <in>ArithmeticRelationWithAggregate.cpp</in>
+            <in>ArithmeticRelationWithAggregate.h</in>
+            <in>Atom.cpp</in>
+            <in>Literal.cpp</in>
+            <in>Program.cpp</in>
+            <in>Rule.cpp</in>
+          </df>
+          <df name="parsing">
+            <in>AspCore2InstanceBuilder.cpp</in>
+            <in>AspCore2ProgramBuilder.cpp</in>
+          </df>
+          <df name="utils">
+            <in>ConstantsManager.cpp</in>
+            <in>FilesManagement.cpp</in>
+            <in>GraphWithTarjanAlgorithm.cpp</in>
+            <in>Indentation.cpp</in>
+            <in>SharedFunctions.cpp</in>
+          </df>
+          <in>CompilationManager.cpp</in>
+          <in>EagerConstraintImpl.cpp</in>
+          <in>ExecutionManager.cpp</in>
+          <in>Executor.cpp</in>
+          <in>LazyConstraintImpl.cpp</in>
+        </df>
+        <df name="outputBuilders">
+          <in>CompetitionOutputBuilder.cpp</in>
+          <in>DimacsOutputBuilder.cpp</in>
+          <in>IdOutputBuilder.cpp</in>
+          <in>MultiOutputBuilder.cpp</in>
+          <in>OutputBuilder.cpp</in>
+          <in>SilentOutputBuilder.cpp</in>
+          <in>ThirdCompetitionOutputBuilder.cpp</in>
+          <in>WaspOutputBuilder.cpp</in>
+        </df>
+        <df name="propagators">
+          <in>Aggregate.cpp</in>
+          <in>CardinalityConstraint.cpp</in>
+          <in>Component.cpp</in>
+          <in>DisjunctionPropagator.cpp</in>
+          <in>ExternalPropagator.cpp</in>
+          <in>HCComponent.cpp</in>
+          <in>MultiAggregate.cpp</in>
+          <in>ReductBasedCheck.cpp</in>
+          <in>UnfoundedBasedCheck.cpp</in>
+        </df>
+        <df name="util">
+          <in>ExtendedStatistics.cpp</in>
+          <in>Statistics.cpp</in>
+          <in>VariableNames.cpp</in>
+          <in>WaspOptions.cpp</in>
+        </df>
+        <df name="weakconstraints">
+          <in>K.cpp</in>
+          <in>LazyInstantiation.cpp</in>
+          <in>Mgd.cpp</in>
+          <in>One.cpp</in>
+          <in>OneBB.cpp</in>
+          <in>Opt.cpp</in>
+          <in>OptimizationProblemUtils.cpp</in>
+          <in>PMRes.cpp</in>
+          <in>WeakInterface.cpp</in>
+        </df>
+        <in>CautiousReasoning.cpp</in>
+        <in>Clause.cpp</in>
+        <in>DependencyGraph.cpp</in>
+        <in>Enumeration.cpp</in>
+        <in>GUSData.cpp</in>
+        <in>Learning.cpp</in>
+        <in>Literal.cpp</in>
+        <in>PredicateMinimization.cpp</in>
+        <in>QueryInterface.cpp</in>
+        <in>ReasonForBinaryClauses.cpp</in>
+        <in>Satelite.cpp</in>
+        <in>Solver.cpp</in>
+        <in>WaspFacade.cpp</in>
+        <in>main.cc</in>
+      </df>
+      <df name="tests">
+        <df name="giuseppe">
+          <in>constraint</in>
+          <in>constraint_with_aggregate</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-std=c++11 -O3"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile -j 8</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean -j 8</cleanCommand>
+          <executablePath>wasp.bin</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>.</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>ENABLE_CPP_EAGER</Elem>
+              <Elem>NDEBUG</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="src/CautiousReasoning.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/Clause.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/DependencyGraph.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/Enumeration.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/GUSData.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/Learning.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/Literal.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/PredicateMinimization.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/QueryInterface.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/ReasonForBinaryClauses.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/Satelite.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/Solver.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/WaspFacade.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/heuristic/ExternalHeuristic.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/heuristic/MinisatHeuristic.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/input/Dimacs.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/input/GringoNumericFormat.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/input/Rule.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/input/WeightConstraint.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/interpreters/Interpreter.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/interpreters/MyCppEagerInterpreter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/interpreters/MyCppLazyInterpreter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/interpreters/MyPerlInterpreter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/interpreters/MyPythonInterpreter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/CompilationManager.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/DLV2libs/input/Buffer.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/DLV2libs/input/InputDirector.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/DLV2libs/util/Options.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/DLV2libs/util/Utils.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/EagerConstraintImpl.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/ExecutionManager.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/Executor.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/LazyConstraintImpl.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/datastructures/AuxiliaryMap.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/datastructures/BoundAnnotatedLiteral.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/datastructures/DenseMap.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/datastructures/PredicateSet.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/datastructures/TupleWithReasons.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/datastructures/TupleWithoutReasons.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/language/Aggregate.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/lp2cpp/language/Aggregate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/lp2cpp/language/ArithmeticExpression.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/language/ArithmeticRelation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/language/ArithmeticRelationWithAggregate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/lp2cpp/language/ArithmeticRelationWithAggregate.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/lp2cpp/language/Atom.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/language/Literal.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/language/Program.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/language/Rule.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/parsing/AspCore2InstanceBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/parsing/AspCore2ProgramBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/utils/ConstantsManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/utils/FilesManagement.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/utils/GraphWithTarjanAlgorithm.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/utils/Indentation.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/lp2cpp/utils/SharedFunctions.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/main.cc" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/outputBuilders/CompetitionOutputBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/outputBuilders/DimacsOutputBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/outputBuilders/IdOutputBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/outputBuilders/MultiOutputBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/outputBuilders/OutputBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/outputBuilders/SilentOutputBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/outputBuilders/ThirdCompetitionOutputBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/outputBuilders/WaspOutputBuilder.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/Aggregate.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/CardinalityConstraint.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/Component.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/DisjunctionPropagator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/ExternalPropagator.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/HCComponent.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/MultiAggregate.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/ReductBasedCheck.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/propagators/UnfoundedBasedCheck.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/util/ExtendedStatistics.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/util/Statistics.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/util/VariableNames.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/util/WaspOptions.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/K.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/LazyInstantiation.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/Mgd.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/One.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/OneBB.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/Opt.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/OptimizationProblemUtils.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/PMRes.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="src/weakconstraints/WeakInterface.cpp"
+            ex="false"
+            tool="1"
+            flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="tests/giuseppe/constraint" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/giuseppe/constraint_with_aggregate"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

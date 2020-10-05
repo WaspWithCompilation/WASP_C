@@ -1,0 +1,139 @@
+Propagazione aggregati
+:-a(X),b(X,Y),#count{Z: c(Y,Z),d(Z,X)}>4
+
+
+propagazioni
+arriva un valore di a : a(1)
+	//fisso X e cerco in B
+	X = 1
+	tuples = pb.find({X})
+	tuplesU = ub.find({X})
+
+	for(tuple : tuples UNION tuplesU){
+		Y = tuple[1]
+
+		if(tuple in tuples){
+			// valore definito per b
+			if sharedVariablesToAggregate[(X,Y)].keySize() > 4
+				//constraint violato
+				conflitto
+			else if sharedVariablesToAggregate[(X,Y)].keySize() == 4{
+
+				//aggregato non vero
+
+				// cerco le chiavi indefinite delle join tuples che non sono in quelle vere
+
+				for(joinTupleU : uJoinTuples.getValues({})){
+
+
+					if(!joinTuples.getValues({joinTupleU[1]})){
+						// se la chiave non è in quelle vere allora se la join tuple diventa vera il contatore aumenterebbe
+
+							//la join tuple può essere costituita da valori veri o indifeniti di c e d
+							tupleC = pc.getValues({joinTupleU[0],joinTupleU[1]})
+							if(tupleC)
+								// c è definito allora d sarà sicuramente indefinito
+								tupleUD = ud.getValues({joinTupleU[2],joinTupleU[3]})
+								propate(tupleUD,false)
+							else
+
+								//c è indefinito 
+								tupleUC = uc.getValues({joinTupleU[0],joinTupleU[1]})
+								tupleD = pd.getValues({joinTupleU[2],joinTupleU[3]})
+								if(tupleD)
+									// d è definito 
+									propagate(tupleUC,false)
+								// se d non fosse definito non posso fare alcuna propagazione
+								
+
+						}
+					}
+				}
+			}
+		}else{
+			// ho un valore indefinito di b
+			tupleU =tuple
+			if sharedVariablesToAggregate[(X,Y)].keySize() > 4
+				//aggregato vero quindi con b falso il constraint non è violato
+				propagate(tupleU,false)
+		}
+	}
+
+
+arriva un valore per b è analogo invertendo b ed a
+
+:-a(X),b(X,Y),#count{Z: c(Y,Z),d(Z,X)}>4
+
+arriva un valore per c(2,3)
+
+	//fisso il valore delle shared variables
+	if (pjoinTuples.keySize() > 4){
+		//aggregato vero
+		//cerco di fare propagazioni all'esterno
+		for(key : pjoinTuples.keySet()){
+			for(tuple : pjoinTuples.getValues({key})){
+				//fisso le shared variables
+				X = tuple[3]
+				Y = tuple[0]
+				tupleU = NULL
+				for(tuple1 : pa.getValues({X}) UNION ua.getValues({X})){
+					if(tuple1 in pa.getValues({X})){
+						for(tuple2 : pb.getValues({X,Y}) UNION ua.getValues({X,Y})){
+							if(tuple2 in pb.getValues({X,Y})){
+								conflict
+							}else{
+								tupleU=tuple2
+								propagate(tupleU,false)
+							}
+						}
+						
+					}else{
+						tupleU = tuple1
+						if(pb.getValues({X,Y}).size() != 0){
+							propagate(tupleU,false);
+						}
+						
+					}
+				}
+
+			}
+		}
+	}else{
+		//l'aggregato non è vero 
+		// se all'esterno è tutto vero posso propagare l'aggregato
+		for(tupl1 : pa.getValues({})){
+			X=tuple1[0]
+			for(tuple2 : pb.getValues({X})){
+				Y=tuple1[1]
+				if sharedVariablesToAggregate[(X,Y)].keySize() == 4{
+
+					//itero sulle chiavi indefinite di join tuple
+					for(keyU : uJoinTuples.keySet()){
+
+					if(keyU not in joinTuples.keySet()){
+						// se la chiave non è in quelle vere e la join tuple diventa vera il contatore aumenterebbe
+
+						for(joinTupleU : uJoinTuples.getValues(keyU)){
+							//la join tuple può essere costituita da valori veri o indifeniti di c e d
+							tupleC = pc.getValues({joinTupleU[0],joinTupleU[1]})
+							if(tupleC)
+								// c è definito allora d sarà sicuramente indefinito
+								tupleUD = ud.getValues({joinTupleU[2],joinTupleU[3]})
+								propate(tupleUD,false)
+							else
+
+								//c è indefinito
+								tupleUC = uc.getValues({joinTupleU[0],joinTupleU[1]})
+								tupleD = pd.getValues({joinTupleU[2],joinTupleU[3]})
+								if(tupleD && tupleUC)
+									// d è definito 
+									propagate(tupleUC,false)
+								// se d non fosse definito non posso fare alcuna propagazione 
+								
+
+						}
+					}
+				}
+			}
+		}
+	}
