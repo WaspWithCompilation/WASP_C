@@ -35,8 +35,7 @@ or
 
 Team
 ===
-* Mario Alviano, University of Calabria
-* Carmine Dodaro, University of Calabria (main developer)
+* Giuseppe Mazzotta,University of Calabria
+* Bernardo Cuteri, University of Calabria
+* Carmine Dodaro, University of Calabria
 * Francesco Ricca, University of Calabria
-
-For any doubt or suggestion feel free to contact us at wasp-asp@googlegroups.com.
