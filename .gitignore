@@ -1,0 +1,10 @@
+build/
+nbproject/
+wasp/
+*.o
+*.txt
+*.so
+profile_eager.sh
+prova
+run.sh
+*.in
